@@ -6,6 +6,7 @@
 技能
 - JavaScript+CSS+HTML 
 - Vue
+  - [vue的全方位源码分析.pdf](https://max.book118.com/html/2021/0813/8134072102003133.shtm)
 - React
 
 
@@ -38,8 +39,6 @@
 - 知乎 https://zhuanlan.zhihu.com/p/339835359
 - csdn
 - 极客时间 https://time.geekbang.org/dashboard/course
-  15178893156
-  !qaz2wsx
 - https://www.liaoxuefeng.com/
 - B站
 
@@ -48,12 +47,30 @@
 - Vue
 - 拿得出手的作品
 
-面试
-- 面试技巧
-- 面试题
-
 长期目标
 - 进一线大厂
 
+
+面试
+- 准备简历
+- 面试技巧
+- 面试题
+  - 怎么理解 call，apply，bind
+  - 怎么理解 MVVM，MVC
+
+面试渠道
+- [实习僧](https://tuiguang.shixiseng.com/user/register_shixi?utm_source=sem-baidu-pc-shixi-7765&utm_campaign=baidusem)
+- [拉勾](https://www.lagou.com/)
+- [前程无忧](https://www.51job.com/)
+
+资料
+- HTTP权威指南
+  链接：https://pan.baidu.com/s/1bphLn7T?pwd=e244 
+  提取码：e244 
+
+- Javascript权威指南  
+  链接：https://pan.baidu.com/s/1c6PDwi?pwd=0ieo 
+  提取码：0ieo 
+
 Roadmap
-![](map.jpg)
+[](map.jpg)
