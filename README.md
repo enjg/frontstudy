@@ -48,6 +48,7 @@
 - 拿得出手的作品
 
 
+
 面试
 - 准备简历
 - 面试技巧
@@ -78,5 +79,29 @@
   - [Node.js Express RESTful](https://www.cnblogs.com/gdjlc/p/14574478.html)
   - [NodeJs学习笔记（三）使用Express创建RESTful服务](https://blog.csdn.net/qq_18404993/article/details/105447373)
 
+
+
+面试
+- 准备简历
+- 面试技巧
+- 面试题
+  - 怎么理解 call，apply，bind
+  - 怎么理解 MVVM，MVC
+
+面试渠道
+- [实习僧](https://tuiguang.shixiseng.com/user/register_shixi?utm_source=sem-baidu-pc-shixi-7765&utm_campaign=baidusem)
+- [拉勾](https://www.lagou.com/)
+- [前程无忧](https://www.51job.com/)
+
+资料
+- HTTP权威指南
+  链接：https://pan.baidu.com/s/1bphLn7T?pwd=e244 
+  提取码：e244 
+
+- Javascript权威指南  
+  链接：https://pan.baidu.com/s/1c6PDwi?pwd=0ieo 
+  提取码：0ieo 
+
 Roadmap
--  ![]map.jpg)
+-  ![](map.jpg)
+
