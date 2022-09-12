@@ -1,0 +1,28 @@
+[
+    {
+        "id":1,
+        "name":"马云",
+        "gender":"男",
+        "birthDay":"2000-10-1 13:23:32",
+        "height" : "170",
+        "placeOfBirth": "浙江",
+        "phone":"13623458789",
+        "email":"mayun@ali.com",
+        "wchat":"mayun",
+        "weibo":"https::/weibo/mayun",
+        "github":"https://github.com/enjg/frontstudy.git"
+    },
+    {
+        "id":2,
+        "name":"张一鸣",
+        "gender":"男",
+        "birthDay":"2002-11-11 13:23:32",
+        "height" : "170",
+        "placeOfBirth": "中国",
+        "phone":"15323457898",
+        "email":"yiming@byte.com",
+        "wchat": "zhangyiming",
+        "weibo":"https::/weibo/yiming",
+        "github":"https://github.com/enjg/frontstudy.git"
+    }
+]

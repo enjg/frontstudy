@@ -1,0 +1,45 @@
+    1  2022-06-13 16:31:38 root ls
+    2  2022-06-13 16:31:46 root pwd
+    3  2022-06-13 16:33:07 root mkdir hj
+    4  2022-06-13 16:33:24 root ls
+    5  2022-06-13 16:34:20 root cd hj
+    6  2022-06-13 16:34:24 root ls
+    7  2022-06-13 16:37:29 root apt update
+    8  2022-06-13 16:38:00 root apt install node.js npm
+    9  2022-06-13 16:38:24 root apt install nodejs npm  # 安装nodejs npm 
+   10  2022-06-13 16:40:12 root nodejs --version
+   11  2022-06-13 16:43:17 root npm init -y
+   12  2022-06-13 16:43:38 root ls
+   13  2022-06-13 16:44:13 root npm i S express  # 安装express
+   14  2022-06-13 16:45:19 root cat 
+   15  2022-06-13 16:46:12 root cat /root/.npm/_logs/2022-06-13T08_44_16_186Z-debug.log 
+   16  2022-06-13 16:48:53 root npm init
+   17  2022-06-13 16:49:39 root ls
+   18  2022-06-13 16:50:33 root mkdir myapp
+   19  2022-06-13 16:50:41 root cd myapp
+   20  2022-06-13 16:50:48 root npm init  # 在myapp项目中初始化一个nodejs项目
+   21  2022-06-13 16:52:15 root ls
+   22  2022-06-13 16:53:02 root npm install express --save-dev  # 为myapp项目安装模块express，存放在node_modules目录
+   23  2022-06-13 16:53:33 root ls
+   24  2022-06-13 17:00:46 root node express-helloWorld.js
+   25  2022-06-13 17:00:55 root ls
+   26  2022-06-13 17:01:29 root node exxpress-helloWorld.js
+   27  2022-06-13 17:16:35 root mkdir public
+   28  2022-06-13 17:16:38 root ls
+   29  2022-06-13 17:18:21 root node app.js  #启动app.js 
+   30  2022-06-13 17:26:03 root cd hj
+   31  2022-06-13 17:26:08 root ls
+   32  2022-06-13 17:26:21 root cd myapp
+   33  2022-06-13 17:26:24 root ls
+   34  2022-06-13 17:27:23 root nodejs app.js &  #后台启动app.js
+   35  2022-06-13 17:28:46 root ps|grep nodejs
+   36  2022-06-13 17:29:28 root kill -9 9157
+   37  2022-06-13 17:29:39 root ps|grep nodejs
+   38  2022-06-13 17:30:05 root nodejs app.js & 
+   39  2022-06-13 17:30:59 root cd hj
+   40  2022-06-13 17:31:00 root ls
+   41  2022-06-13 17:31:06 root cd myapp
+   42  2022-06-13 17:31:09 root ls
+   43  2022-06-13 17:31:32 root ps -ef |grep app.js #查看app.js进程
+   44  2022-06-13 17:31:56 root nodejs app.js &
+   45  2022-06-13 17:33:00 root history >cmd.text

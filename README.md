@@ -6,7 +6,7 @@
 技能
 - JavaScript+CSS+HTML 
 - Vue
-  - [vue的全方位源码分析.pdf](https://max.book118.com/html/2021/0813/8134072102003133.shtm)
+  - [Vue的全方位源码分析.pdf](https://max.book118.com/html/2021/0813/8134072102003133.shtm)
 - React
 
 
@@ -47,9 +47,6 @@
 - Vue
 - 拿得出手的作品
 
-长期目标
-- 进一线大厂
-
 
 面试
 - 准备简历
@@ -71,6 +68,12 @@
 - Javascript权威指南  
   链接：https://pan.baidu.com/s/1c6PDwi?pwd=0ieo 
   提取码：0ieo 
+- [ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/intro)
+
+知识点
+- URL的组成部分
+  - [URL组成部分详解](https://www.cnblogs.com/7798554A/p/16020451.html)
+  - [详解URL的组成](https://blog.csdn.net/qq_43517257/article/details/123598231)
 
 Roadmap
-![](map.jpg)
+-  ![]map.jpg)
