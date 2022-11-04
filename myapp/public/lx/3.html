@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #f1{
+            height: 200px;
+            width: 220px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="cdd()">1</button>
+    <div style="height: 50px;width:1200px;background-color:black;"></div>
+    <div id="f1">
+        <form>
+            姓名：<input src="text" >
+            姓名：<input src="text"><br>
+            姓名：<input src="text">
+            姓名：<input src="text">
+        </form>
+        <button onclick="qx()">取消</button>
+        <button onclick="tj()">添加</button>
+        <button onclick="qc()">清除</button>
+    </div>
+    <script>
+        let f1=document.getElementById('f1');
+        function cdd(){
+            document.getElementById('f1').style.display='block';
+        }
+        function qx(){
+            document.getElementById('f1').style.display='none';
+
+        }
+        function qc(){
+            
+            var inputs = document.getElementsByTagName("input");
+            for(var i = 0,len = inputs.length;i<len;i++){
+               
+                inputs[i].value = "";
+            
+        }       
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+.head{
+    background-color: #1ABC9C;
+    height: 616px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 163px;
+    text-align: center;
+}
+.biaoqian{
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    
+}
+.a1{
+    width: 1000px;
+    height: 117px;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+    
+    
+}
+.left{
+    width: 290px;
+    height: 282px;
+    margin-top: 23px;
+    float: left;
+    margin-left: 100px;
+}
+.middle{
+    width: 290px;
+    height: 282px;
+    margin-top: 23px;
+    float: left;
+    margin-left: 65px;
+}
+.right{
+    width: 290px;
+    height: 282px;
+    margin-top: 23px;
+    float: left;
+    margin-left: 65px;
+    color: white;
+    margin-bottom: 10px;
+}
+.left ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    color: white;
+}
+.left ul li{
+    height: 47px;
+    border-bottom: 1px solid white;
+    line-height: 47px;
+}
+.middle ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    color: white;
+}
+.middle ul li{
+    height: 47px;
+    border-bottom: 1px solid white;
+    line-height: 47px;
+}
+.middle ul li img{
+    height: 30px;
+    margin-top: 10px;
+}
+.right p{
+    border-bottom: 1px solid white;
+    height: 47px;
+    line-height: 47px;
+    padding: 0;
+    margin: 0;
+}
+.a2{
+    width: 1200px;
+    height: 59px;
+    overflow: hidden;
+    padding: 0;   
+}
+.a2 img{
+    width: 100%;
+    height: 100%;
+}
+.button{
+    height: 500px;
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    float: left;
+    position: absolute;
+    right: 130px;
+    top: 500px;
+}
+.button button{
+    width: 100px;
+    margin-top: 20px;
+}
+input{
+    border: none;
+    outline: medium;
+    background: transparent;
+}
+
+
+#f1{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    z-index: 2;
+    background-color: rgb(255,255,255,0.6);
+    border: 1px solid black;
+    border-radius:  15% 15% 15% 15%;
+    padding: 20px;
+}
+#f1 input{
+    width: 100px;
+    margin-top: 20px;
+}
+.f1-left{
+    width: 300px;
+    float: left;
+    height: 200px;
+}
+.f1-right{
+    width: 300px;
+    float: left;
+    height: 200px;
+}
+#f1 button{
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 75px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
+}
+#f1 button:hover {background-color: #3e8e41}
+
+#f1 button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+

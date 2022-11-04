@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <form id="search" action="/portal/" method="post" >
+        <input type="text" name="username"/>
+        <input type="password" name="password"/>
+        <a class="btn" onclick=search(1)>提交</a>
+    </form>
+
+    <script>
+        function search(page){
+	
+	$.ajax({
+
+		// ajax 请求的url
+		url: "/portal/",
+
+		// 向服务器改善的数据
+		data: function () {
+		    // 为了调试方便，用了function
+		    // 数据形式是这样的: "username=&password="
+			formData = $('#search').serialize();
+			return formData;
+        },
+
+		// 服务器返回的数据类型
+		dataType: 'html',
+
+		// 请求成功后要做的
+		success: function (resultData) {
+		    // resultData 是服务器返回的 html 形式的数据
+			// <div><h1> 这是返回的 html 数据</h1></div>
+			$('#content').html(resultData);
+        },
+
+		// 请求出错后要做的
+		error: function (xhr) {
+			console.log(xhr);
+        }
+
+	});
+}
+
+    </script>
+</body>
+</html>

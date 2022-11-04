@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css.css">
+
+</head>
+<body>
+    <div class="head">
+        <img class="biaoqian" src="./img/未标题-2.png">
+        <div class="a1">
+            <h1>Windir</h1>
+            <p>实习</p>
+            <p>前端开发方向</p>
+        </div>
+        <div class="left">
+            <ul>
+                <li>关于本人 ABOUT ME</li>
+                <li>姓名&nbsp;&nbsp;<input type="text" value="" id="name"></li>
+                <li>性别&nbsp;&nbsp;<input type="text" value="" id="gender"></li>
+                <li>生日&nbsp;&nbsp;<input type="text" value="" id="birthDay"></li>
+                <li>身高&nbsp;&nbsp;<input type="text" value="" id="height"></li>
+                <li>籍贯&nbsp;&nbsp;<input type="text" value="" id="placeOfBirth" ></li>
+            </ul>
+        </div>
+        <div class="middle">
+            <ul>
+                <li>联系本人 CONTACT ME</li>
+                <li><img src="./img/电话.png" >&nbsp;&nbsp;<input type="text" value="" id="phone"></li>
+                <li><img src="./img/短信.png">&nbsp;&nbsp;<input type="text" value="" id="email"></li>
+                <li><img src="./img/微信.png">&nbsp;&nbsp;<input type="text" value="" id="wchat"></li>
+                <li><img src="./img/微博.png">&nbsp;&nbsp;<input type="text" value="" id="weibo"></li>
+                <li><img src="./img/github-fill.png">&nbsp;&nbsp;<input type="text" value="" id="github"></li>
+            </ul>
+        </div>
+        <div class="right">
+            <p>头像 HEAD PORTRAIT</p>
+            <form action="/upload" method="post" enctype="multipart/form-data" target="_blank">
+              <input type="file" name="img"><br /><br />
+              <input type="submit" value="提交">
+          </form>
+        </div>
+        <div class="a2">
+            <img src="./img/未标题-1.jps">
+        </div>
+    </div>
+    <div id="f1">
+        <form>
+            <div class="f1-left">
+                姓名：<input type="text" value="" id="name1"><span id="nameerror"></span><br>
+                性别：<input type="radio" name="gender" value="男" checked style="width: auto;">男<input type="radio" name="gender" value="女" style="width: auto;">女<br>
+                生日：<input type="date" value="" id="birthDay1"><span id="birthDayerror"></span><br>
+                身高：<input type="text" value="" id="height1"><span id="heighterror"></span><br>
+                籍贯：<input type="text" value="" id="placeOfBirth1" >   
+                </div>
+                <div class="f1-right">
+                电话：<input type="text" value="" id="phone1"><span id="phoneerror"></span><br>
+                短信：<input type="text" value="" id="email1"><br>
+                微信：<input type="text" value="" id="wchat1"><br>
+                微博：<input type="text" value="" id="weibo1"><br>
+                GitHub：<input type="text" value="" id="github1">
+                </div>
+        </form>
+        <button onclick="tj()">添加</button>
+        <button onclick="cz()">重置</button>
+        <button onclick="qx()">取消</button>
+    </div>
+    <div class="button">
+        <form name="form1" action="">
+            <select id="se" name="sel" onfocus="addopt()">
+            </select><br>
+        </form>
+        <button id="btn3">添加</button>
+        <button id="btn4">删除</button>
+        <button id="btn5">修改</button>
+    </div>
+    
+    
+    <script>
+        let btn3=document.getElementById('btn3');
+        let btn4=document.getElementById('btn4');
+        let name=document.getElementById('name');
+        let gender=document.getElementById('gender');
+        let birthDay=document.getElementById('birthDay');
+        let height=document.getElementById('height');
+        let placeOfBirth=document.getElementById('placeOfBirth');
+        let phone=document.getElementById('phone');
+        let email=document.getElementById('email');
+        let wchat=document.getElementById('wchat');
+        let weibo=document.getElementById('weibo');
+        let github=document.getElementById('github');
+        let btn5=document.getElementById('btn5');
+        let se=document.getElementById('se');
+        let id=-1;
+
+
+
+
+        function cz(){
+            var inputs = document.getElementsByTagName("input");
+            for(var i = 0,len = inputs.length;i<len;i++){
+               
+                inputs[i].value = "";
+            
+        }
+        }
+        function qx(){
+            document.getElementById('f1').style.display='none';
+            cz();
+        }
+
+
+        function addopt(){
+            se.options.length=0;
+            //for(var i=0;i<se.options.length;i++){
+            //se.removeChild(se.options[0]);
+            //se.remove(0);
+            //se.options[0] = null;
+            //}
+            if(id<0){
+                axios({
+                method:'get',
+                url: 'http://114.116.52.70/list',
+            }).then(function(response){
+                name.value=response.data[0].name;
+                gender.value=response.data[0].gender;
+                birthDay.value=response.data[0].birthDay;
+                height.value=response.data[0].height;
+                placeOfBirth.value=response.data[0].placeOfBirth;
+                phone.value=response.data[0].phone;
+                email.value=response.data[0].email;
+                wchat.value=response.data[0].wchat;
+                weibo.value=response.data[0].weibo;
+                github.value=response.data[0].github;
+                id=response.data[0].id;
+            })
+            }
+        axios({
+                method:'get',
+                url: 'http://114.116.52.70/list',
+            }).then(function(response){
+                console.log(response.data);
+                let arr=response.data;
+                for(var i=0;i<arr.length;i++){
+                    var opt=document.createElement('option')
+                    opt.text=arr[i].name
+                    opt.value=arr[i].id;
+                    document.form1.sel.add(opt,undefined)
+                }
+            })
+        
+            }
+    window.onload = function () {
+            
+             document.getElementById('se').addEventListener('change',function(){
+                id=this.value;
+                axios({
+                method:'get',
+                url: 'http://114.116.52.70/detail/'+this.value,
+            }).then(function(response){
+                console.log(response.data);
+                name.value=response.data[0].name;
+                gender.value=response.data[0].gender;
+                birthDay.value=response.data[0].birthDay;
+                height.value=response.data[0].height;
+                placeOfBirth.value=response.data[0].placeOfBirth;
+                phone.value=response.data[0].phone;
+                email.value=response.data[0].email;
+                wchat.value=response.data[0].wchat;
+                weibo.value=response.data[0].weibo;
+                github.value=response.data[0].github;
+                id=response.data[0].id;
+            })
+             },false);
+         }
+         btn3.onclick=()=>{
+            document.getElementById('f1').style.display='block';
+         }
+        function tj(){
+            var tf=true;
+            var birthDayerror=document.getElementById('birthDayerror');
+            var phoneerror=document.getElementById('phoneerror');
+            var nameerror=document.getElementById('nameerror');
+            var name = document.getElementById('name1').value;
+            var phone=document.getElementById('phone1').value;
+            var regExp = new RegExp("^1[3578]\\d{9}$"); 
+            var xb = null;
+            var obj = document.getElementsByName("gender");
+            var oTimer = document.getElementById("birthDay1");
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    xb = obj[i].value;                   
+                }
+            }                 
+            if(name == "" || name == null){
+                nameerror.innerHTML = "不为空";
+                tf=false;
+            }else{
+                nameerror.innerHTML = "";
+
+            }
+            if(phone==""||phone==null){
+                phoneerror.innerHTML = "手机号不为空！";
+                tf=false;
+            }else if (!regExp.test(phone)) {
+                phoneerror.innerHTML = "手机号格式不对！";
+                tf=false;
+
+            }else{
+                phoneerror.innerHTML = "";
+
+            }
+            if(oTimer.value==""||oTimer.value==null){
+                tf=false;
+                birthDayerror.innerHTML="生日不为空";
+            }else{
+                birthDayerror.innerHTML="";
+
+            }
+            if(tf){
+                axios({
+                method:'post',
+                url: 'http://114.116.52.70/add',
+                data:{
+                    name:name,
+                    gender:xb,
+                    birthDay:oTimer.value,
+                    height:height1.value,
+                    placeOfBirth:placeOfBirth1.value,
+                    phone:phone,
+                    email:email1.value,
+                    wchat:wchat1.value,
+                    weibo:weibo1.value,
+                    github:github1.value
+                }
+            }).then(
+                response=>console.log(response.data),
+                error=>console.log(error)
+            )
+            }
+            
+        }
+        btn4.onclick=()=>{
+            axios({
+                method:'get',
+                url: 'http://114.116.52.70/delete/'+id,
+            }).then(
+                response=>console.log(response.data),
+                error=>console.log(error)
+            )
+        }
+        btn5.onclick=()=>{
+            axios({
+                method:'post',
+                url: 'http://114.116.52.70/update/'+id,
+                data:{
+                    name:name.value,
+                    gender:gender.value,
+                    birthDay:birthDay.value,
+                    height:height.value,
+                    placeOfBirth:placeOfBirth.value,
+                    phone:phone.value,
+                    email:email.value,
+                    wchat:wchat.value,
+                    weibo:weibo.value,
+                    github:github.value
+                }
+            }).then(
+                response=>console.log(response.data),
+                error=>console.log(error)
+            )
+            addopt();
+        }
+    </script>
+</body>
+</html>
