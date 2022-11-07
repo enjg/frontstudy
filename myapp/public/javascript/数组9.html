@@ -10,10 +10,10 @@
     <p id="demo"></p>
     <button onclick="mf()">点击</button>
     <script>
-        var hj=["banana","orange","apple","mango"];
         function mf(){
-            var delell=hj.shift();//shift()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。
-            document.getElementById('demo').innerHTML='删掉后的数组为：'+hj+"<br>"+"删掉的元素为："+delell;
+            var hj=["banana","orange","lemon","apple","mango"];
+            var delell=hj.slice(1,3);//slice()方法可从已有的数组中返回选定的元素。slice()方法可提取字符串的某个部分，并以新的字符串返回被提取的部分
+            document.getElementById('demo').innerHTML=delell;
         }
     </script>
 </body>

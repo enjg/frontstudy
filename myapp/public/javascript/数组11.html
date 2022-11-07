@@ -10,10 +10,10 @@
     <p id="demo"></p>
     <button onclick="mf()">点击</button>
     <script>
-        var hj=["banana","orange","apple","mango"];
         function mf(){
-            var delell=hj.shift();//shift()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。
-            document.getElementById('demo').innerHTML='删掉后的数组为：'+hj+"<br>"+"删掉的元素为："+delell;
+            var points=[48,22,36,1,98,5,11];
+            points.sort(function(a,b){return a-b});
+            document.getElementById('demo').innerHTML=points;
         }
     </script>
 </body>
