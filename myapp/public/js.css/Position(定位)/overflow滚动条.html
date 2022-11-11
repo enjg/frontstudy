@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.ex1 {
+            background-color: lightblue;
+            width: 110px;
+            height: 110px;
+            overflow: scroll;
+        }
+
+        div.ex2 {
+            background-color: lightblue;
+            width: 110px;
+            height: 110px;
+            overflow: hidden;
+        }
+
+        div.ex3 {
+            background-color: lightblue;
+            width: 110px;
+            height: 110px;
+            overflow: auto;
+        }
+
+        div.ex4 {
+            background-color: lightblue;
+            width: 110px;
+            height: 110px;
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <h2>overflow: scroll:</h2><!--内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容-->
+    <div class="ex1">道、可道，非常道。名可名，非常名。无名，天地之始；有名万物之母；故恒无欲，以观其妙；恒有欲，以观其徼。此两者，同出而异名，同谓之玄。玄之又玄，众妙之门。</div>
+    <h2>overflow: hidden:</h2><!--内容会被修剪，并且其余内容是不可见的-->
+    <div class="ex2">天下皆知美之为美，斯恶已。皆知善之为善，斯不善已。故有无相生，难易相成，长短相形，高下相盈，音声相和，前后相随。恒也。是以圣人处无为之事，行不言之教；万物作而弗始，生而弗有，为而弗恃，功成而不居。夫唯弗居，是以不去。</div>
+    <h2>overflow: auto:</h2><!--如果内容被修剪，则浏览器会显示滚动条以便查看其余内容-->
+    <div class="ex3">不尚贤，使民不争；不贵难得之货，使民不为盗；不见可欲，使民心不乱。是以圣人之治也，虚其心，实其腹，弱其志，强其骨。恒使民无知无欲。使夫智者不敢为也。为无为，则无不治矣。</div>
+    <h2>overflow: visible (默认):</h2><!--默认值，内容不会被修剪，会呈现在元素框之外-->
+    <div class="ex4">道冲，而用之或不盈也。渊兮似万物之宗；挫其锐，解其纷；和其光，同其尘；湛兮似或存。吾不知其谁之子，象帝之先。</div>
+</body>
+</html>
