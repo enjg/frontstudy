@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            border: 1px solid #ccc;
+        }
+        .img:hover{
+            border: 1px solid #777;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .desc{
+            padding: 15px;
+            text-align: center;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .responsive{
+            padding: 0 6px;
+            float: left;
+            width: 25%;
+        }
+        @media only screen and(max-width:700px){
+            .responsive{
+                width: 50%;
+                margin: 6px 0;
+            }
+        }
+        @media only screen and(max-width:500px){
+            .responsive{
+                width: 100%;
+            }
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="">
+                <img src="https://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">This Is</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="">
+                <img src="https://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">This Is</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="">
+                <img src="https://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">This Is</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="">
+                <img src="https://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">This Is</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</body>
+</html>
