@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navlist{
+            position: relative;
+        }
+        li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+        li,a{
+            height: 44px;
+            display: block;
+        }
+        .home{
+            left: 0;
+            width: 46px;
+            background: url('../imgs/img_navsprites_hover.gif') 0 0;
+        }
+        .home a:hover{
+            background: url('../imgs/img_navsprites_hover.gif') 0 -45px;
+        }
+        .prev{
+            left: 63px;
+            width: 43px;
+            background: url('../imgs/img_navsprites_hover.gif') -47px 0;
+        }
+        .prev a:hover{
+            background: url('../imgs/img_navsprites_hover.gif') -47px -45px;
+
+        }
+        .next{
+            left: 129px;
+            width: 43px;
+            background: url('../imgs/img_navsprites_hover.gif') -91px 0;
+        }
+        .next a:hover{
+            background: url('../imgs/img_navsprites_hover.gif') -91px -89px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navlist">
+        <li class="home"><a href=""></a></li>
+        <li class="prev"><a href=""></a></li>
+        <li class="next"><a href=""></a></li>
+    </ul>
+</body>
+</html>
