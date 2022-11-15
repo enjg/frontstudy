@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    var text = '{ "sites" : [' +
+	    '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+	    '{ "name":"Google" , "url":"www.google.com" },' +
+	    '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+	
+    obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
+</script>
+</body>
+</html>

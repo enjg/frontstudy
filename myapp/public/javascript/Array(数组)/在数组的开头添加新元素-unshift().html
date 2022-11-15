@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="mf()">点击</button>
+    <script>
+        function mf(){
+            var hj=["banana","orange","apple","mango"];
+            hj.unshift("lemon","pineapple");//unshift()方法将一个或多个元素添加到数组的开头，并返回该数组的新长度
+            document.getElementById('demo').innerHTML=hj;
+        }
+    </script>
+</body>
+</html>

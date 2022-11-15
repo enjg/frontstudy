@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">获取今年的年份</p>
+    <button onclick="myfunction()">点击</button>
+    <script>
+        function myfunction(){
+            var a=new Date();
+            var x=document.getElementById('demo');
+            x.innerHTML=a.getFullYear();
+        }
+    </script>
+</body>
+</html>
