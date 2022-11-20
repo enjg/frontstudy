@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Image tu use:</p>
+    <img id="scream" src="../img/OIP-C.jpg" alt="The Scream" width="200" height="300">
+    <p>Canvas:</p>
+    <canvas id="myCanvas" width="200" height="300" style="border: 1px solid black;"></canvas>
+    <script>
+        var a=document.getElementById("myCanvas");
+        var b=a.getContext("2d");
+        var img=document.getElementById("scream");
+        img.onload=function(){
+            b.drawImage(img,10,10);
+        }
+    </script>
+</body>
+</html>

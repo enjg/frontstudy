@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">点击按钮获取当前的坐标</p>
+    <button onclick="my()">点击</button>
+    <script>
+        var x=document.getElementById('demo');
+        function my(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }else{
+
+                x.innerHTML="不支持获取地理位置";
+            }
+        }
+        function showPosition(position){
+            x.innerHTML="纬度: " + position.coords.latitude + 
+	        "<br>经度: " + position.coords.longitude;	
+        }
+    </script>
+</body>
+</html>
