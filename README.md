@@ -22,6 +22,7 @@
 工具
 - [github](https://github.com/)
 - [Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+- Copilot
 - vscode
 - Notepad++
 - BeyondCompare
